@@ -1,23 +1,19 @@
-from module1 import*
-p=loe_failist_listisse("ludi.txt")
-i=loe_failist_listisse("zarplata.txt")
+from module1 import *
 while True:
-	a=input("Funktsioonid: \n Add-1\n remove-2\n biggest-3\n smallest-4\n sorteerimine-5\n search-7\n tulumaks-8")
-	if a=="1":
-		add_person()
-	elif a=="2":
-		delete_person()
-	elif a=="3":
-		suurim_palk(i,p)
-	elif a=="4":
-		smallest_salary()
-	elif a=="5":
-		sorting()
-	elif a=="7":
-		search_name()
-	elif a=="8":
-		tulumaks()
-	elif a.upper=="E":
-		break
-	else:
-		("See funktsioon ei tööta või ei olema")
+a=input("Funktsioonid: \n delet-1\n Add-2\n sortirovka-3\n min-4\n biggest-5\n")
+if a=="1":
+delete_person()
+elif a=="2":
+add_person()
+elif a=="3":
+sorting()
+elif a=="4":
+smallest_salary()
+elif a=="5":
+biggest_salary()
+elif a=="7":
+break
+else:
+("eta funktsia ne robit")
+
+
