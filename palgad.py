@@ -14,5 +14,3 @@ big_palk()
 break
 else:
 ("eta funktsia ne robit")
-
-
