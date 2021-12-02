@@ -1,10 +1,10 @@
 ﻿def lists()->list:
-	"""tegi listid failist
+	""" tegi listid failist
 	"""
 	palgad=[]
 	with open("zarplata.txt", "r") as f1: #avame fail
 		for s in f1:
-			palgad.append(s.strip()) 
+			palgad.append(s.strip()) # tegi listid
 	inimesed=[]
 	with open ("ludi.txt", "r") as inimene:
 		for q in inimene:
@@ -16,27 +16,27 @@ def add_inimene():
 	"""
 	nimi=input("Siseta nimi: ")
 	palga=input("Siseta palgad: ")
-	with open("ludi.txt", "a") as inimesed: #lisame nimi failisse 
+	with open("ludi.txt", "a") as inimesed: #lisame nimi  
 		inimesed.write(nimi+"\n")	
-	with open("zarplata.txt", "a") as palgad: #lisame palk failisse
+	with open("zarplata.txt", "a") as palgad: #lisame palk 
 		palgad.write(palga+"\n")
 
 def delete_inimene():
 	"""delete_inimene()
 	"""
-	palgad,inimesed=lists() # failid ja kasutamine lsitid 
+	palgad,inimesed=lists()  
 	nimi=input("Siseta nimi: ")
-	if nimi not in inimesed: # vaatame kas on olemas selline inimene
+	if nimi not in inimesed: # kontrollime kui nimi on listis
 		print("Kas sa tahad lisada nimi ja palgad?") 
 		c=input("Y = jah, N = ei")
 		if c.upper=="Y":
-			add_person() 
+			add_person() # kasutame funktsioon kus me registreerime nimi ja palk
 		else:
 			pass
 	else:
 		a=inimesed.index(nimi) # otsing  indeks
-		inimesed.pop(a) # delet nimi
-		palgad.pop(a) #deletpalk
+		inimesed.pop(a) 
+		palgad.pop(a) 
 	f=open("ludi.txt", "w")
 	for g in inimesed:
 		f.write(g+"\n")
@@ -50,8 +50,8 @@ def big_palk():
 	"""Arvutamine suurim palk
 	"""
 	palgad,inimesed=lists()
-	suurim=max(palgad) 
-	b=palgad.index(suurim) # indeks muutuja edasiseks kasutamiseks
+	suurim=max(palgad) # indeks muutuja edasiseks kasutamiseks
+	b=palgad.index(suurim) 
 	print("kõike suured palga on "+inimesed[b]+" palga")
 
 def smal_palk():
@@ -72,9 +72,5 @@ def sortirovka():
 	palgadS=palgad.copy()
 	palgadS.sort()
 	for palk in palgadS:
-		a=palgad.index(palk) #  otsime indeks et leida nimi ja palk sorteerimata loenditesтированых списках
+		a=palgad.index(palk) # otsime indeks et leida nimi ja palk sorteerimata loenditesтированых списках
 		print(palgad[a]+" "+inimesed[a])
-
-
-
-
