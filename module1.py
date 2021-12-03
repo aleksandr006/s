@@ -14,12 +14,19 @@
 def add_inimene():
 	""" lisamine inimese ja palk
 	"""
-	nimi=input("Siseta nimi: ")
-	palga=input("Siseta palgad: ")
+	N=1
+	palgad=[]
+	inimesed=[]
+	for n in range(N):
+		nimi=input("Siseta nimi: ")
+
+		inimesed.append(nimi)
+		palk=input("Siseta palgad: ")
+		palgad.append(palk)
 	with open("ludi.txt", "a") as inimesed: #lisame nimi  
 		inimesed.write(nimi+"\n")	
 	with open("zarplata.txt", "a") as palgad: #lisame palk 
-		palgad.write(palga+"\n")
+		palgad.write(palk+"\n")
 
 def delete_inimene():
 	"""delete_inimene()
