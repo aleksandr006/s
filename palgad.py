@@ -1,16 +1,17 @@
 from module1 import *
-while True:
-    a=input("Funktsioonid: \n delet-1\n Add-2\n sortirovka-3\n min-4\n biggest-5\n")
-    if a=="1":
-        delete_inimene()
-    elif a=="2":
-        add_inimene()
-    elif a=="3":
-        sortirovka()
-    elif a=="4":
-        smal_palk()
-    elif a=="5":
-        big_palk()
-    break
-else:
-    ("eta funktsia ne robit")
+from tkinter import*
+root=Tk()#создаёт окно
+root.title("")
+root.geometry("2000x1000+100+100")
+
+knop1=Button(root,text="add inimene",font="Arial 15",relief="flat",width=10,height=3,bg="#fb00ff",command=lambda:add_inimene())
+knop2=Button(root,text="delete_inimene",font="Arial 15",relief="flat",width=10,height=3,bg="#fb00ff",command=lambda:delete_inimene())
+knop1=Button(root,text="big_palk()",font="Arial 15",relief="flat",width=10,height=3,bg="#fb00ff",command=lambda:big_palk())
+knop1=Button(root,text="smal_palk()",font="Arial 15",relief="flat",width=10,height=3,bg="#fb00ff",command=lambda:smal_palk())
+
+
+
+
+
+knop1.pack()
+root.mainloop()

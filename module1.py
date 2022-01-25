@@ -81,3 +81,4 @@ def sortirovka():
 	for palk in palgadS:
 		a=palgad.index(palk) # otsime indeks et leida nimi ja palk sorteerimata loenditesтированых списках
 		print(palgad[a]+" "+inimesed[a])
+
