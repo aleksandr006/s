@@ -14,19 +14,19 @@
 def add_inimene():
 	""" lisamine inimese ja palk
 	"""
+	aken=Tk()
 	N=1
 	palgad=[]
 	inimesed=[]
 	for n in range(N):
-		nimi=input("Siseta nimi: ")
-
+		nimi=Entry(aken,text="Siseta nimi: ")
 		inimesed.append(nimi)
-		palk=input("Siseta palgad: ")
+		palk=Entryut(aken,text="Siseta palgad: ")
 		palgad.append(palk)
 	with open("ludi.txt", "a") as inimesed: #lisame nimi  
 		inimesed.write(nimi+"\n")	
 	with open("zarplata.txt", "a") as palgad: #lisame palk 
-		palgad.write(palk+"\n")
+		palgad.write(palk+"\n")	
 
 def delete_inimene():
 	"""delete_inimene()
