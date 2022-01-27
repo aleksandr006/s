@@ -1,7 +1,7 @@
 from module1 import *
 from tkinter import*
 root=Tk()
-root.title("Face")
+root.title("")
 root.geometry('1000x500')
 root.configure(bg="blue")
 root.grab_set()
